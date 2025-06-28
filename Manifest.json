@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "LeetCode Assistant",
+  "version": "1.0",
+  "description": "AI-powered coding assistant for LeetCode",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://leetcode.com/problems/*"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "LeetCode Assistant",
+    "default_icon": {
+      "16": "icon.png",
+      "32": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["openai.min.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
