@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   let userApiKey = null;
   
   // 🔑 DEFAULT API KEY (fallback)
-  const DEFAULT_API_KEY = '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';
+  const DEFAULT_API_KEY = 'your-api-key-here';
 
   // Load saved API key
   chrome.storage.local.get(['userApiKey'], (result) => {
